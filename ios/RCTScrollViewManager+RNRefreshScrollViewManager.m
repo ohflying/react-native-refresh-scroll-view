@@ -16,8 +16,6 @@
 
 RCT_EXPORT_METHOD(stopFling: (nonnull NSNumber *)reactTag)
 {
-    RCTLog(@"js fling stopFling %f", [[NSDate date] timeIntervalSince1970] * 1000);
-    
     [self.bridge.uiManager addUIBlock:
      ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, RCTScrollView *> *viewRegistry) {
          
@@ -40,7 +38,6 @@ RCT_EXPORT_METHOD(fling: (nonnull NSNumber *)reactTag
                   velocity:(CGFloat)velocity
                   deceleration:(CGFloat)deceleration)
 {
-    RCTLog(@"fling1 %f velocity=%f", [[NSDate date] timeIntervalSince1970] * 1000, velocity);
     [self.bridge.uiManager addUIBlock:
      ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, RCTScrollView *> *viewRegistry) {
          

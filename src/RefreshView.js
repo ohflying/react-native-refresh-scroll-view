@@ -13,7 +13,6 @@ export default class RefreshView extends React.PureComponent {
     }
 
     onPullStateChanged(pullState: number) {
-        console.log('onPullStateChanged=' + pullState);
         let hint;
         switch (pullState) {
         case PullState.PULLING:
