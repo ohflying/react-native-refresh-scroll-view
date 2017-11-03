@@ -32,8 +32,6 @@ class RefreshFlatList extends React.PureComponent<*, *, *> {
 
         this.gestureHandler = PanResponder.create({
             onStartShouldSetPanResponder: this._handleOnShouldSetPanResponder,
-            onStartShouldSetPanResponderCapture: this._handleOnShouldSetPanResponder,
-            onMoveShouldSetPanResponderCapture: this._handleOnShouldSetPanResponder,
             onMoveShouldSetPanResponder: this._handleOnShouldSetPanResponder,
             onPanResponderGrant: this._handlePanResponderGrant,
             onPanResponderMove: this._handlePanResponderMove,
