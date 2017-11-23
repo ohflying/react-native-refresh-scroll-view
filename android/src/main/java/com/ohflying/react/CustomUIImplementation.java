@@ -16,7 +16,7 @@ import java.util.List;
 public class CustomUIImplementation extends UIImplementation {
     //#ifdef version < 0.49
     public CustomUIImplementation(ReactApplicationContext reactContext, List<ViewManager> viewManagers, EventDispatcher eventDispatcher) {
-        super(reactContext, new ViewManagerRegistry(viewManagers), eventDispatcher);
+        super(reactContext, viewManagers, eventDispatcher);
     }
     //#endif
 
