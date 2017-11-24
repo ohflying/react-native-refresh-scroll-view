@@ -141,6 +141,10 @@ class RefreshFlatList extends React.PureComponent<*, *, *> {
     };
 
     _renderFooter = (): React.Component<*, *, *> => {
+        if (!this.props.ListFooterComponent) {
+            return undefined;
+        }
+
         return React.isValidElement(this.props.ListFooterComponent)
             ? this.props.ListFooterComponent
             : <this.props.ListFooterComponent />;
